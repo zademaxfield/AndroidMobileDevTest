@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Just For Testing Suite" configfailurepolicy="continue" verbose="2">
+    <test name="Android Just For Testing">
+        <parameter name="os" value="android" />
+        <parameter name="fileName" value="android-mobile-dev-release.apk" />
+<!--        <parameter name="testDevice" value="ce06171675347c0b027e" />-->
+        <parameter name="testDevice" value="emulator-5554" />
+        <!--<parameter name="testDevice" value="8XV5T15A30006448" />-->
+        <!--<parameter name="testDevice" value="STFZade-Pool" />-->
+        <!--<parameter name="testDevice" value="WIRELESS-10.109.154.160:5555" />-->
+        <!--<parameter name="testDevice" value="STF-Pool" />-->
+        <!--<parameter name="testDevice" value="STF-364c5930534f3098" />-->
+<!--        <parameter name="testDevice" value="STF-710KPFX0305667" />-->
+        <!--<parameter name="testDevice" value="STFMain-Pool" />-->
+        <!--<parameter name="testDevice" value="STF-ce061716cae890d10d7e" />-->
+        <parameter name="startSleepTime" value="0200" />
+
+        <groups>
+            <run>
+                <include name="jft"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="AndroidMobileDev.BaseDriver" />
+            <class name="AndroidMobileDevAppTest.MainPageTest" />
+
+        </classes>
+    </test > <!-- Default test -->
+</suite> <!-- Default suite -->
